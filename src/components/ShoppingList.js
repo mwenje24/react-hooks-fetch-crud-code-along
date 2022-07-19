@@ -11,8 +11,12 @@ function ShoppingList() {
   useEffect(() => {
     fetch("http://localhost:4000/items")
       .then((r) => r.json())
-      .then((items) => console.log(items));
+      .then((items) => setItems(items));
   }, []);
+
+  function handleAddItem(newItem) {
+    setItems([...items, newItem]);
+  }
 
   function handleCategoryChange(category) {
     setSelectedCategory(category);
@@ -26,7 +30,7 @@ function ShoppingList() {
 
   return (
     <div className="ShoppingList">
-      <ItemForm />
+      <ItemForm onAddItem={handleAddItem}/>
       <Filter
         category={selectedCategory}
         onCategoryChange={handleCategoryChange}

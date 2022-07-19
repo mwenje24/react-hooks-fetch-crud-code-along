@@ -41,6 +41,18 @@
       "category": "Produce",
       "isInCart": false,
       "id": 7
+    },
+    {
+      "name": "French Fries",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 8
+    },
+    {
+      "name": "Spanish Omlet",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 9
     }
   ]
 }
